@@ -1,0 +1,24 @@
+# Example configuration for projectify scaffold generator
+project_name: mirrorball
+description: Standardized benchmarking tools for statistical models and optimizers in high-energy physics.
+project_url: https://github.com/MoAly98/mirrorball
+authors:
+  - name: Mohamed Aly
+    email: mohamed.aly@cern.ch
+  - name: Peter Fackeldey
+    email: peter.fackeldey@cern.ch
+dependencies:
+  - google-benchmark
+  - jax>=0.7.2
+  - optimistix>=0.0.10
+dependency_groups:
+  test:
+    - pytest>=7
+    - pytest-cov>=3
+  docs:
+    - sphinx>=7
+    - furo
+  examples:
+    - rich
+dev_extras:
+  - mypy-extensions
