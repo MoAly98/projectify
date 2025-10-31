@@ -83,9 +83,6 @@ class ProjectifyGeneratorTests(unittest.TestCase):
             "docs/architecture.md",
             "docs/contributing.md",
             "docs/api/index.md",
-            "docs/api/inference.md",
-            "docs/api/parameters.md",
-            "docs/api/statelib.md",
             "src/sample_project/__init__.py",
             "tests/test_placeholder.py",
         ]
