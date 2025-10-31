@@ -5,11 +5,11 @@ Reusable scaffold generator for Python projects that follow the mirrorball/everw
 ## Requirements
 
 - Python 3.11+
-- [PyYAML](https://pyyaml.org/) (`pip install PyYAML`)
+- [uv](https://docs.astral.sh/uv/) for dependency management (pulls in [PyYAML](https://pyyaml.org/) automatically)
 
 ## Getting started
 
-Clone this repository and install dependencies:
+Clone this repository and install dependencies with uv:
 
 ```bash
 uv sync --group dev
@@ -21,10 +21,10 @@ uv sync --group dev
    - `project_name`, `description`, `project_url`
    - `authors`: list of `{ name, email }` entries
    - `dependencies`, `dependency_groups`, `dev_extras`
-2. Run the generator from the repository root:
+2. Run the generator from the repository root with uv so that PyYAML is available:
 
    ```bash
-   python projectify.py path/to/config.yml --destination /path/to/output
+   uv run projectify.py path/to/config.yml --destination /path/to/output
    ```
 
    This creates `/path/to/output/<project_name>/` populated with:
@@ -40,7 +40,7 @@ uv sync --group dev
 Run tests before committing changes:
 
 ```bash
-python3 -m unittest discover tests
+uv run python -m unittest discover tests
 ```
 
 Linting and formatting are handled via the repo’s pre-commit hooks.
